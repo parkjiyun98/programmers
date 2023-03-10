@@ -3,13 +3,7 @@ class Solution {
     public int[] solution(String msg) {
         ArrayList<Integer> array = new ArrayList<>();
         HashMap<String, Integer> map = new HashMap<>();
-        /*
-        char ch = 'A';
-        for(int i = 1; i< 27; i++){
-            map.put(ch + "", i);
-            ch += 1;
-        }
-        */
+        
         String al = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for(int i = 0; i < 26; i++){
             map.put(al.charAt(i) + "", i+1);
@@ -31,8 +25,8 @@ class Solution {
                 array.add(map.get(temp));
                 break;
             }
-            array.add(map.get(temp.substring(0, temp.length()-1)));
             map.put(temp, start++);
+            array.add(map.get(temp.substring(0, temp.length()-1)));
             i--;
         }
         int[] answer = new int[array.size()];
