@@ -7,9 +7,9 @@ class Solution {
             String s = files[i];
             
             int firstI = -1;
-            boolean check = true;
             int secondI = -1;
             int count = 0;
+            boolean check = true;
             
             for(int j = 0; j < s.length(); j++){
                 if(Character.isDigit(s.charAt(j))){
