@@ -9,7 +9,6 @@ class Solution {
 			int count = check(m, n, map);
 			if(count == 0) break;
 			answer += count;
-			
 			drop(m, n, map);
 		}
         return answer;
@@ -53,11 +52,11 @@ class Solution {
 		return count;
 	}
     public void checkFour(char[][] map, boolean[][] check, int x, int y) {
-		char block = map[x][y];
+		char temp = map[x][y];
 		
 		for(int i = x ; i < x + 2 ; i++) {
 			for(int j = y ; j < y + 2 ; j++) {
-				if(map[i][j] != block) return;
+				if(map[i][j] != temp) return;
 			}
 		}
 		
