@@ -1,6 +1,7 @@
 import java.util.*;
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
+        /*
         int[] answer = new int[100];
         int day = 0;
         
@@ -29,8 +30,8 @@ class Solution {
         }
         
         return result;
+        */
         
-        /*
         Queue<Integer> q = new LinkedList<>();
         int i = 0;
         int index = 0;
@@ -58,6 +59,6 @@ class Solution {
                 
         }
         return list.stream().mapToInt(Integer :: intValue).toArray();
-        */
+        
     }
 }
