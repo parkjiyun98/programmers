@@ -1,20 +1,20 @@
 class Solution {
     public String solution(int n, int t, int m, int p) {
-        StringBuilder x = new StringBuilder();
+        StringBuilder s = new StringBuilder();
         StringBuilder result = new StringBuilder();
-        //String x = "";
+        //String s = "";
         //String result = "";
-        for(int i = 0; x.length() <= t * m; i++){
-            x.append(Integer.toString(i, n));
-            //x += Integer.toString(i, n);
+        
+        for(int i = 0; s.length() < t * m; i++){
+            s.append(Integer.toString(i, n));
+            //s += Integer.toString(i, n);
         }
         
-        for(int i = p - 1;  result.length() < t; i += m){
-            result.append(x.charAt(i));
-            //result += x.charAt(i);
+        for(int i = p - 1; result.length() < t; i += m){
+            result.append(s.charAt(i));
+            //result += s.charAt(i);
         }
         
         return result.toString().toUpperCase();
-        
     }
 }
