@@ -5,6 +5,7 @@ class Solution {
         HashMap<String, String> map = new HashMap<>();
         for(int i = 0; i < record.length; i++){
             String[] temp = record[i].split(" ");
+            
             if(temp[0].equals("Leave"))
                 continue;
             else if(temp[0].equals("Enter"))
@@ -21,13 +22,11 @@ class Solution {
             String[] temp = record[i].split(" ");
             String name = map.get(temp[1]);
             
-            if(temp[0].equals("Enter"))
+            if(temp[0].equals("Enter"))                     
                 answer[index++] = name + "님이 들어왔습니다.";
             else if(temp[0].equals("Leave"))
                 answer[index++] = name + "님이 나갔습니다.";
         }
-        
         return answer;
-        
     }
 }
