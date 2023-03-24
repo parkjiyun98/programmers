@@ -1,41 +1,38 @@
 import java.util.*;
 class Solution {
     public String[] solution(String[] files) {
-        
         String[] answer = new String[files.length];
         String[][] answer2 = new String[files.length][3];
-        
         for(int i = 0; i < files.length; i++){
             String s = files[i];
             
-            int firstIdx = -1;
-            int secondIdx = -1;
+            int firstI = -1;
+            int secondI = -1;
             int count = 0;
             boolean check = true;
             
             for(int j = 0; j < s.length(); j++){
                 if(Character.isDigit(s.charAt(j))){
-                    if(check){
-                        firstIdx = j;
+                    if(check) {
+                        firstI = j;
                         check = false;
                     }
                     count++;
                 }else{
-                    if(!check)
-                        break;
+                    if(!check) break;
                 }
             }
-            secondIdx = firstIdx + count - 1;
             
-            String head = s.substring(0, firstIdx);
-            String number = s.substring(firstIdx, secondIdx + 1);
-            String tail = s.substring(secondIdx + 1);
+            secondI = firstI + count - 1;
+            
+            String head = s.substring(0, firstI);
+            String number = s.substring(firstI, secondI + 1);
+            String tail = s.substring(secondI + 1);
             
             answer2[i][0] = head;
             answer2[i][1] = number;
-            answer2[i][2] = tail;
+            answer2[i][2] = tail;            
         }
-        
         Arrays.sort(answer2, (o1, o2) -> {
             if(o1[0].toLowerCase().compareTo(o2[0].toLowerCase()) > 0){
                 return 1;
