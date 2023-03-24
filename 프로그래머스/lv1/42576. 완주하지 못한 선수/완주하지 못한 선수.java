@@ -3,16 +3,15 @@ class Solution {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
         HashMap<String, Integer> map = new HashMap<>();
-
-        for(String x : participant)
-            map.put(x, map.getOrDefault(x, 0) + 1);
-        for (String x : completion) {
-            map.put(x, map.get(x) - 1);
-        }
         
-        for (String x : map.keySet()) {
-            if (map.get(x) != 0) {
-                answer = x;
+        for(String s : participant)
+            map.put(s, map.getOrDefault(s, 0) + 1);
+        for(String s : completion)
+            map.put(s, map.get(s) - 1);
+        
+        for(String s : map.keySet()){
+            if(map.get(s) != 0){
+                answer = s;
                 break;
             }
         }
