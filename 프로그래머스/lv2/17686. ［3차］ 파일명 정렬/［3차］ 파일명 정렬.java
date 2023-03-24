@@ -53,7 +53,6 @@ class Solution {
             answer[i] = answer2[i][0] + answer2[i][1] + answer2[i][2];
         }
         
-        
         return answer;
     }
 }
