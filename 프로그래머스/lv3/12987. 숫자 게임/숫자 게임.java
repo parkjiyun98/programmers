@@ -4,15 +4,21 @@ class Solution {
         int answer = 0;
         Arrays.sort(A);
         Arrays.sort(B);
-        int a = 0;
-        int b = 0;
-        while (a < A.length && b < B.length) {
-            if (A[a] < B[b]) {
+        
+        int aIndex = 0;
+        int bIndex = 0;
+        int bLength = B.length;
+        while(bLength > 0){
+            if(A[aIndex] < B[bIndex] ){
+                aIndex++;
+                bIndex++;
+                bLength--;
                 answer++;
-                a++;
-                b++;
             }
-            else b++;
+            else{
+                bIndex++;
+                bLength--;
+            }
         }
         return answer;
     }
