@@ -12,8 +12,8 @@ class Solution {
            return "0";
         StringBuilder answer = new StringBuilder();
 
-        for (String x : arr) {
-            answer.append(x);
+        for (String s : arr) {
+            answer.append(s);
         }
         return answer.toString();
     }
