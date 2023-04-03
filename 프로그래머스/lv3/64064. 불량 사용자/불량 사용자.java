@@ -1,8 +1,10 @@
 import java.util.*;
+import java.util.regex.Pattern;
+
 class Solution {
     HashSet<HashSet<String>> result = new HashSet<>();
     public int solution(String[] user_id, String[] banned_id) {
-        //boolean[] visited = new boolean[user_id.length];
+        
         HashSet<String> set = new HashSet<>();
         dfs(set, 0, user_id, banned_id);
 
@@ -41,4 +43,11 @@ class Solution {
 
         return b;
     }
+    /*
+    public boolean check(String userId, String bannedId) {
+        String bannedPattern = bannedId.replace("*", ".");
+        return Pattern.matches(bannedPattern, userId);
+    }
+    */
+    
 }
