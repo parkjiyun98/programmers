@@ -1,6 +1,7 @@
 import java.util.*;
 class Solution {
     public int solution(int n, int[][] costs) {
+        //서로소 집합 & 크루스칼 알고리즘
         int answer = 0;
         int[] set = new int[n];
         for(int i = 0; i < n; i++){
