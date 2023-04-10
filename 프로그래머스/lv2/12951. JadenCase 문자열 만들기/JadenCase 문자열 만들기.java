@@ -1,5 +1,6 @@
 class Solution {
     public String solution(String s) {
+        /*
         String answer = "";
         if(s.charAt(0) >= 97 && s.charAt(0) <= 122){
             String temp = s.charAt(0) + "";
@@ -29,5 +30,21 @@ class Solution {
             }
         }
         return answer;
+        */
+        char[] ch = s.toCharArray();
+        int idx = 0;
+        for(int i = 0; i < ch.length; i++){
+            if(ch[i] == ' '){
+                idx = 0;
+                continue ;
+            }     
+            if(idx == 0){
+                ch[i] = Character.toUpperCase(ch[i]);
+                idx += 1;
+            } else {
+                ch[i] = Character.toLowerCase(ch[i]);
+            }
+        } 
+        return String.valueOf(ch);
     }
 }
