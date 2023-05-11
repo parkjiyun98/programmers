@@ -12,11 +12,15 @@ public class Solution {
                 x = arr[i];
             }
         }
+        
         int[] answer = new int[list.size()];
         for(int i = 0; i < list.size(); i++){
             answer[i] = list.get(i);
         }
-        //return list.stream().mapToInt(i->i).toArray();
+        
         return answer;
+        
+        //return list.stream().mapToInt(i->i).toArray();
+        
     }
 }
