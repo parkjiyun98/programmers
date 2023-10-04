@@ -3,7 +3,7 @@ class Solution
 {
     public int solution(String s)
     {
-        /*
+        
         int answer = -1;
         
         Stack<Character> stack = new Stack<>();
@@ -23,7 +23,8 @@ class Solution
             answer = 0;
 
         return answer;
-        */
+        
+        /*
         int answer = 0;
         Stack<Character> stack = new Stack<>();
 
@@ -41,5 +42,6 @@ class Solution
 
 
         return stack.size() > 0 ? 0 : 1;
+        */
     }
 }
