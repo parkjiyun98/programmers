@@ -2,9 +2,12 @@ class Solution {
     public int[] solution(long n) {
         String s = String.valueOf(n);
         int[] answer = new int[s.length()];
+        int i = 0;
         
-        for (int i = 0; i < s.length(); i++) {
-            answer[i] = s.charAt(s.length() - 1 - i) - '0';
+        while (n > 0){
+            answer[i] = (int)(n%10);
+            n /= 10;
+            i++;
         }
         
         return answer;
