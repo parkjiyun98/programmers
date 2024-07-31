@@ -1,12 +1,13 @@
 class Solution {
     public String solution(String s) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
+        int middle = s.length() / 2;
         if(s.length() % 2 != 0){
-            answer += s.charAt(s.length() / 2);
+            answer.append(s.charAt(middle));
         } else{
-            answer += s.charAt(s.length() /2 -1);
-            answer += s.charAt(s.length() / 2);
+            answer.append(s.charAt(middle -1));
+            answer.append(s.charAt(middle));
         }
-        return answer;
+        return answer.toString();
     }
 }
